@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <math.h>
 
-//FAZ TUDO
+//FAZ TUDO AAAAAA
 
 int max( int num1, int num2){
 	int resultado, divisor, maior, contagem;
