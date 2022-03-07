@@ -5,7 +5,7 @@
 //FAZ TUDO AAAAAA222
 
 
-int max( int num1, int num2){
+int max( int num1, int num2){ 
 	int resultado, divisor, maior, contagem;
 	resultado=0;
 	divisor=1;
@@ -229,4 +229,8 @@ int main () {
 	return 0;
 	
 	
+}
+
+int teste() {
+	printf("oioioioioi");
 }
