@@ -1,0 +1,205 @@
+<MyLayout>
+    BoxLayout:
+        orientation: "vertical"
+        size: root.width, root.height
+
+        TextInput:
+            id: txtCalc
+            text: "0"
+            halign: "right"
+            font_size: 65
+            size_hint: (1, .20)
+
+        GridLayout:
+            cols: 4
+            rows: 5
+            spacing:2
+
+            #Row
+
+            Button:
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "%"
+                background_normal: ''
+                background_color: (27/255, 126/255, 168/255, 1)
+                
+
+            Button:
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "C"
+                background_normal: ''
+                background_color: (27/255, 126/255, 168/255, 1)
+                on_press: root.clear()
+            Button:
+                id: btnClear
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "<<"
+                background_normal: ''
+                background_color: (27/255, 126/255, 168/255, 1)
+                on_press:root.Remove()
+                
+
+            Button:
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "/"
+                background_normal: ''
+                background_color: (27/255, 126/255, 168/255, 1)
+                on_press: root.MathSign("/")
+
+            #Row
+
+            Button:
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "7"
+                background_normal: ''
+                color:(68/255, 64/255, 69/255, 1)
+                outline_border: True
+                outline_width:1
+                on_press: root.ButtonPress(7)
+
+            Button:
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "8"
+                background_normal: ''
+                color:(68/255, 64/255, 69/255, 1)
+                outline_border: True
+                outline_width:1
+                on_press: root.ButtonPress(8)
+
+            Button:
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "9"
+                background_normal: ''
+                color:(68/255, 64/255, 69/255, 1)
+                outline_border: True
+                outline_width:1
+                on_press: root.ButtonPress(9)
+
+            Button:
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "*"
+                background_normal: ''
+                background_color: (27/255, 126/255, 168/255, 1)
+                on_press: root.MathSign("*")
+
+            #Row
+
+            Button:
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "4"
+                background_normal: ''
+                color:(68/255, 64/255, 69/255, 1)
+                outline_border: True
+                outline_width:1
+                on_press: root.ButtonPress(4)
+            Button:
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "5"
+                background_normal: ''
+                color:(68/255, 64/255, 69/255, 1)
+                outline_border: True
+                outline_width:1
+                on_press: root.ButtonPress(5)
+            Button:
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "6"
+                background_normal: ''
+                color:(68/255, 64/255, 69/255, 1)
+                outline_border: True
+                outline_width:1
+                on_press: root.ButtonPress(6)
+            Button:
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "-"
+                background_normal: ''
+                background_color: (27/255, 126/255, 168/255, 1)
+                on_press: root.MathSign("-")
+
+            #Row
+
+            Button:
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "1"
+                background_normal: ''
+                color:(68/255, 64/255, 69/255, 1)
+                outline_border: True
+                outline_width:1
+                on_press: root.ButtonPress(1)
+
+            Button:
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "2"
+                background_normal: ''
+                color:(68/255, 64/255, 69/255, 1)
+                outline_border: True
+                outline_width:1
+                on_press: root.ButtonPress(2)
+            Button:
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "3"
+                background_normal: ''
+                color:(68/255, 64/255, 69/255, 1)
+                outline_border: True
+                outline_width:1
+                on_press: root.ButtonPress(3)
+            Button:
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "+"
+                background_normal: ''
+                background_color: (27/255, 126/255, 168/255, 1)
+                on_press: root.MathSign("+")
+
+            #Row
+
+            Button:
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "+/-"
+                background_normal: ''
+                color:(68/255, 64/255, 69/255, 1)
+                outline_border: True
+                outline_width:1
+                on_press: root.Pos_Neg()
+
+            Button:
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "0"
+                background_normal: ''
+                color:(68/255, 64/255, 69/255, 1)
+                outline_border: True
+                outline_width:1
+                on_press: root.ButtonPress(0)
+            Button:
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "."
+                background_normal: ''
+                color:(68/255, 64/255, 69/255, 1)
+                outline_border: True
+                outline_width:1
+                on_press: root.Dot()
+
+            Button:
+                size_hint: (.2, .2)
+                font_size: 32
+                text: "="
+                background_normal: ''
+                background_color: (27/255, 126/255, 168/255, 1)
+                on_press: root.Equals()
