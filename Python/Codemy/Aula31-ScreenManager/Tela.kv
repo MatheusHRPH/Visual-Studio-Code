@@ -1,0 +1,42 @@
+#:import NoTransition kivy.uix.screenmanager.NoTransition
+
+WindowManager:
+    FirstWindow:
+    SecondWindow:
+    
+
+<FirstWindow>:
+    name:"firstWindow"
+    
+    BoxLayout:
+        orientation:'vertical'
+        size:root.width,root.height
+
+        Label:
+            text: "First Screen"
+            font_size:32
+        
+        Button:
+            text: "->"
+            font_size:32
+            on_press:
+                app.root.current = "secondWindow"
+                root.manager.transition.direction = "left"
+                #root.manager.transition = NoTransition()
+<SecondWindow>:
+    name:"secondWindow"
+    BoxLayout:
+        orientation:'vertical'
+        size:root.width,root.height
+
+        Label:
+            text: "Second Screen"
+            font_size:32
+        
+        Button:
+            text: "<-"
+            font_size:32
+            on_press:
+                app.root.current = "firstWindow"
+                root.manager.transition.direction = "right"
+                #root.manager.transition =  NoTransition()

@@ -1,0 +1,31 @@
+<MyLayout>
+
+    BoxLayout:
+        
+        orientation:'vertical'
+        size:root.width, root.height
+
+        padding:50
+        spacing:20
+
+        Label:
+            id:lblTexto
+            text:"Hello World"
+            font_size:32
+
+        Button:
+            
+            font_size:32
+            size_hint:.15,.20
+            background_color:1,1,1,0
+            pos_hint:{'center_x':0.5}
+            on_press:root.hello()
+            on_release:root.pressBtn()
+            Image:
+                id:myImage
+                size_hint:.15,.20
+                source:'Botao2.png'
+                center_x:self.parent.center_x 
+                center_y:self.parent.center_y 
+            
+            
